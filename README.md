@@ -9,7 +9,13 @@ This project is a Django-based template designed with a modular architecture, ma
 * **Custom management commands** for streamlined operations.
 * **Reusable components** such as middleware, permissions, and caching strategies.
 * **Repository pattern** for data access, promoting clean and testable code.
-* **Comprehensive test suite** with organized test modules.
+* **Dependency Injection** for improved testability and modularity in service integration and component management.
+* **Custom validation** to ensure data integrity and enforce business rules.
+* **Pydantic integration** for data validation and settings management, enhancing data integrity and configuration management.
+* **Serializer management** to handle data transformation and serialization across different API components.
+* **URL management** with organized routing configurations for different parts of the application.
+* **Model management** for effective database schema design and migrations, supporting scalable and maintainable data structures.
+* **Comprehensive test suite** with organized test modules
 
 ## Project Structure
 Here's a detailed breakdown of the project structure:
