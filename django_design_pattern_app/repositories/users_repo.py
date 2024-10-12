@@ -1,6 +1,6 @@
 from django_design_pattern_app.repositories.base_repo import BaseRepo
 from django_design_pattern_app.schemas.users import RegisterUserSchema
-from django_design_pattern_app.services.sms.tasks import send_sms_task
+from django_design_pattern_app.services.sms.tasks import SendSms
 from django_design_pattern_app.models.users import Users
 from typing import List, Optional
 from django.db.transaction import atomic
@@ -22,7 +22,7 @@ class UsersRepo(BaseRepo):
     # SMS Service
     @staticmethod
     def log_sms(phone_number: str, message: str):
-        send_sms_task.delay(phone_number, message)
+        SendSms().send_sms_task.delay(phone_number, message)
 
     # ORM postgresql
     @atomic

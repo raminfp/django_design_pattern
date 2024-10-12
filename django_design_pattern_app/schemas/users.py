@@ -25,7 +25,6 @@ class RegisterUserSchema(BaseModel):
     city: str
 
 
-
 class LogIndexModel(BaseModel):
     user: UserModel
     node_id: int

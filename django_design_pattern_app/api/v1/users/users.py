@@ -26,6 +26,7 @@ class IndexView(BaseView, generics.GenericAPIView):
         Update user information
         """
         try:
+
             print("Starting")
             self.user_repo.test_elk()
             print("User information")

@@ -12,6 +12,7 @@ python-dotenv
 django-filter
 django_redis
 sentry_sdk
+kavenegar
 jdatetime
 injector
 pydantic

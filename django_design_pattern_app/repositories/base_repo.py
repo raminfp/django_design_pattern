@@ -9,7 +9,5 @@ class BaseRepo:
 
     @inject
     def __init__(self, minio_sdk: MinIOSDK, elk: SearchELK):
-        # self.es = es
-        # self.redis = redis
         self.service_minio = minio_sdk
         self.elk = elk

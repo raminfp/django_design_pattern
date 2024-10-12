@@ -1,5 +1,5 @@
 from injector import Module, singleton
-from django_design_pattern_app.services.sms.kavenegar import KavenegarAPI
+from kavenegar import *
 
 
 class KavenegarModule(Module):
