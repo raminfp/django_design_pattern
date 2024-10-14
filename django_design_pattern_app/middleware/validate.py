@@ -1,5 +1,5 @@
 from functools import wraps
-from ngr_update_system_app.utils.validations import ValidateAndHandleErrors
+from django_design_pattern_app.utils.validations import ValidateAndHandleErrors
 
 
 def validate_serializer():
