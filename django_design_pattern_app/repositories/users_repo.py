@@ -15,6 +15,7 @@ class UsersRepo(BaseRepo):
         aggs = {}
         data = self.elk.new_search(query=query, aggs=aggs, size=0)
         return data
+
     # MinIO
     def minio_find(self):
         return self.service_minio.find_object("", "")
