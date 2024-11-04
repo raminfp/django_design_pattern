@@ -26,19 +26,16 @@ Here's a detailed breakdown of the project structure:
 │   ├── asgi.py
 │   ├── celery.py
 │   ├── __init__.py
-│   ├── __pycache__
 │   ├── settings
 │   │   ├── base.py
 │   │   ├── extra.py
-│   │   ├── __init__.py
-│   │   └── __pycache__
+│   │   └── __init__.py
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
 ├── django_design_pattern_app
 │   ├── api
 │   │   ├── __init__.py
-│   │   ├── __pycache__
 │   │   └── v1
 │   │       ├── admin
 │   │       │   ├── __init__.py
@@ -46,10 +43,8 @@ Here's a detailed breakdown of the project structure:
 │   │       ├── auth
 │   │       │   └── __init__.py
 │   │       ├── __init__.py
-│   │       ├── __pycache__
 │   │       └── users
 │   │           ├── __init__.py
-│   │           ├── __pycache__
 │   │           └── users.py
 │   ├── apps.py
 │   ├── cache
@@ -59,52 +54,43 @@ Here's a detailed breakdown of the project structure:
 │   ├── __init__.py
 │   ├── injector
 │   │   ├── base_injector.py
-│   │   ├── __init__.py
-│   │   └── __pycache__
+│   │   └── __init__.py
 │   ├── management
 │   │   ├── commands
 │   │   │   ├── create_superuser.py
 │   │   │   ├── import_sql.py
 │   │   │   ├── __init__.py
 │   │   │   └── launch_queue_listener.py
-│   │   ├── __init__.py
-│   │   └── __pycache__
+│   │   └── __init__.py
 │   ├── middleware
 │   │   ├── exceptionhandler.py
 │   │   ├── exceptions.py
 │   │   ├── __init__.py
-│   │   ├── __pycache__
 │   │   ├── response.py
 │   │   └── validate.py
 │   ├── migrations
 │   │   ├── 0001_initial.py
-│   │   ├── __init__.py
-│   │   └── __pycache__
+│   │   └── __init__.py
 │   ├── models
 │   │   ├── base.py
 │   │   ├── __init__.py
-│   │   ├── __pycache__
 │   │   └── users.py
 │   ├── modules
 │   │   ├── elastic_module.py
 │   │   ├── __init__.py
 │   │   ├── kavenegar_module.py
 │   │   ├── minio_module.py
-│   │   ├── __pycache__
 │   │   ├── rabbitmq_module.py
 │   │   └── redis_module.py
 │   ├── permissions
 │   │   ├── __init__.py
 │   │   └── permissions.py
-│   ├── __pycache__
 │   ├── repositories
 │   │   ├── base_repo.py
 │   │   ├── __init__.py
-│   │   ├── __pycache__
 │   │   └── users_repo.py
 │   ├── schemas
 │   │   ├── __init__.py
-│   │   ├── __pycache__
 │   │   └── users.py
 │   ├── serializers
 │   │   ├── admin
@@ -114,20 +100,16 @@ Here's a detailed breakdown of the project structure:
 │   │   │   ├── auth_serializers.py
 │   │   │   └── __init__.py
 │   │   ├── __init__.py
-│   │   ├── __pycache__
 │   │   └── users
 │   │       ├── __init__.py
-│   │       ├── __pycache__
 │   │       └── users_serializers.py
 │   ├── services
 │   │   ├── elasticsearch
 │   │   │   ├── elasticsearch.py
 │   │   │   ├── indexing
 │   │   │   │   ├── __init__.py
-│   │   │   │   ├── __pycache__
 │   │   │   │   └── users_index.py
-│   │   │   ├── __init__.py
-│   │   │   └── __pycache__
+│   │   │   └── __init__.py
 │   │   ├── __init__.py
 │   │   ├── kafka
 │   │   │   ├── __init__.py
@@ -135,20 +117,15 @@ Here's a detailed breakdown of the project structure:
 │   │   │   └── queue_listener.py
 │   │   ├── minio
 │   │   │   ├── __init__.py
-│   │   │   ├── minio.py
-│   │   │   └── __pycache__
-│   │   ├── __pycache__
+│   │   │   └── minio.py
 │   │   ├── rabbitmq
 │   │   │   ├── __init__.py
-│   │   │   ├── __pycache__
 │   │   │   └── rabbitmq.py
 │   │   ├── redis
 │   │   │   ├── __init__.py
-│   │   │   ├── __pycache__
 │   │   │   └── redis.py
 │   │   └── sms
 │   │       ├── __init__.py
-│   │       ├── __pycache__
 │   │       └── tasks.py
 │   ├── signals
 │   │   ├── __init__.py
@@ -165,17 +142,14 @@ Here's a detailed breakdown of the project structure:
 │   ├── urls
 │   │   ├── admin
 │   │   │   ├── admin.py
-│   │   │   ├── __init__.py
-│   │   │   └── __pycache__
+│   │   │   └── __init__.py
 │   │   ├── __init__.py
-│   │   ├── __pycache__
 │   │   ├── urls.py
 │   │   └── users.py
 │   └── utils
 │       ├── helper.py
 │       ├── __init__.py
 │       ├── messages.py
-│       ├── __pycache__
 │       └── validations.py
 └── manage.py
 
