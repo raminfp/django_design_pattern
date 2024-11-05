@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.db import models
 
 
@@ -8,3 +9,7 @@ class BaseModel(models.Model):
     class Meta:
         abstract = True
 
+    def save(self, *args, **kwargs):
+        if self.pk:
+            self.updated_at = timezone.now()
+        super().save(*args, **kwargs)
