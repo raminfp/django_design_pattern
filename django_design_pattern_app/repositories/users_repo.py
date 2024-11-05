@@ -57,6 +57,7 @@ class UsersRepo(BaseRepo):
             # Save the updated user instance
             user.save()
             return user
+        return None
 
     @atomic
     def get_total_user(self):
