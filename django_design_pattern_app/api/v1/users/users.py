@@ -24,14 +24,13 @@ class IndexView(BaseView, generics.GenericAPIView):
     @handle_exceptions
     def get(self, request):
         """
-        Update user information
+        Sample View
         """
-        print("Starting")
-        self.user_repo.test_elk()
-        print("User information")
-        sz = self.get_serializer(data=request.data)
-        result = ValidateAndHandleErrors.validate_and_handle_errors(sz)
-        if result:
-            return result
+        print("Starting... Call  database  ")
+        self.user_repo.get_user_by_id(request.user.id)
+        print("Starting... Call minio ")
+        self.user_repo.minio_find()
+        print("Starting... Call elasticsearch ")
+        self.user_repo.elk_search()
         # TODO : ...
         return APIResponse(data=True)
