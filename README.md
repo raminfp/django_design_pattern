@@ -166,3 +166,42 @@ This structure provides a detailed view of the project's organization, including
 - URL configurations
 - Utility functions and helpers
 
+
+### Docker configuration 
+
+```bash
+$ docker-compose up --build
+
+[+] Running 3/0
+ ⠿ Container django_design_pattern-minio-1     Created                                0.0s
+ ⠿ Container django_design_pattern-redis-1     Created                                0.0s
+ ⠿ Container django_design_pattern-postgres-1  Created                                0.0s
+Attaching to django_design_pattern-minio-1, django_design_pattern-postgres-1, django_design_pattern-redis-1
+django_design_pattern-postgres-1  | 
+django_design_pattern-postgres-1  | PostgreSQL Database directory appears to contain a database; Skipping initialization
+django_design_pattern-postgres-1  | 
+django_design_pattern-postgres-1  | 2024-11-09 06:12:45.569 GMT [1] LOG:  redirecting log output to logging collector process
+django_design_pattern-postgres-1  | 2024-11-09 06:12:45.569 GMT [1] HINT:  Future log output will appear in directory "pg_log".
+django_design_pattern-redis-1     | 1:C 09 Nov 2024 06:12:45.707 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+django_design_pattern-redis-1     | 1:C 09 Nov 2024 06:12:45.707 * Redis version=7.4.1, bits=64, commit=00000000, modified=0, pid=1, just started
+django_design_pattern-redis-1     | 1:C 09 Nov 2024 06:12:45.707 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+django_design_pattern-redis-1     | 1:M 09 Nov 2024 06:12:45.708 * monotonic clock: POSIX clock_gettime
+django_design_pattern-redis-1     | 1:M 09 Nov 2024 06:12:45.709 * Running mode=standalone, port=6379.
+django_design_pattern-redis-1     | 1:M 09 Nov 2024 06:12:45.709 * Server initialized
+django_design_pattern-redis-1     | 1:M 09 Nov 2024 06:12:45.709 * Loading RDB produced by version 7.4.1
+django_design_pattern-redis-1     | 1:M 09 Nov 2024 06:12:45.709 * RDB age 8 seconds
+django_design_pattern-redis-1     | 1:M 09 Nov 2024 06:12:45.709 * RDB memory usage when created 0.90 Mb
+django_design_pattern-redis-1     | 1:M 09 Nov 2024 06:12:45.709 * Done loading RDB, keys loaded: 0, keys expired: 0.
+django_design_pattern-redis-1     | 1:M 09 Nov 2024 06:12:45.709 * DB loaded from disk: 0.000 seconds
+django_design_pattern-redis-1     | 1:M 09 Nov 2024 06:12:45.709 * Ready to accept connections tcp
+django_design_pattern-minio-1     | MinIO Object Storage Server
+django_design_pattern-minio-1     | Copyright: 2015-2024 MinIO, Inc.
+django_design_pattern-minio-1     | License: GNU AGPLv3 - https://www.gnu.org/licenses/agpl-3.0.html
+django_design_pattern-minio-1     | Version: RELEASE.2024-11-07T00-52-20Z (go1.23.3 linux/amd64)
+django_design_pattern-minio-1     | 
+django_design_pattern-minio-1     | API: http://192.168.160.3:9000  http://127.0.0.1:9000 
+django_design_pattern-minio-1     | WebUI: http://192.168.160.3:45897 http://127.0.0.1:45897 
+django_design_pattern-minio-1     | 
+django_design_pattern-minio-1     | Docs: https://docs.min.io
+
+```
