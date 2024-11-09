@@ -25,7 +25,7 @@ class UsersRepo(BaseRepo):
     def log_sms(phone_number: str, message: str):
         SendSms().send_sms_task.delay(phone_number, message)
 
-    # ORM postgresql
+    # ORM postgresql.conf
     @atomic
     def get_users(self) -> List[Users]:
         return list(Users.objects.all())

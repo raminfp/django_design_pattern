@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  redis:
+    build:
+      context: .
+      dockerfile: infrastructure/redis/Dockerfile
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  postgres:
+    build:
+      context: .
+      dockerfile: infrastructure/postgres/Dockerfile
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql.conf/data
+
+  minio:
+    build:
+      context: .
+      dockerfile: infrastructure/minio/Dockerfile
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+
+    volumes:
+      - minio-data:/data
+
+volumes:
+  redis-data:
+  postgres-data:
+  minio-data:
