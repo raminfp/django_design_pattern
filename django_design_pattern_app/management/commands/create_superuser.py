@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from django_design_pattern_app.models import Representations
+from django_design_pattern_app.models import Users
 import os
 
 class Command(BaseCommand):
