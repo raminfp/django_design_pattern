@@ -1,49 +1,49 @@
 version: '3'
 
 services:
-#  redis:
-#    build:
-#      context: .
-#      dockerfile: infrastructure/redis/Dockerfile
-#    ports:
-#      - "6379:6379"
-#    volumes:
-#      - redis-data:/data
-#
-#  postgres:
-#    build:
-#      context: .
-#      dockerfile: infrastructure/postgres/Dockerfile
-#    ports:
-#      - "5432:5432"
-#    volumes:
-#      - postgres-data:/var/lib/postgresql.conf/data
-#
-#  minio:
-#    build:
-#      context: .
-#      dockerfile: infrastructure/minio/Dockerfile
-#    ports:
-#      - "9000:9000"
-#      - "9001:9001"
-#
-#    volumes:
-#      - minio-data:/data
-#  rabbitmq:
-#    build:
-#        context: .
-#        dockerfile: infrastructure/rabbitmq/Dockerfile
-#    container_name: rabbitmq
-#    image: rabbitmq:3-management  # Use the official RabbitMQ image with management UI
-#    environment:
-#      RABBITMQ_DEFAULT_USER: user      # Default username
-#      RABBITMQ_DEFAULT_PASS: password  # Default password
-#    ports:
-#      - "5672:5672"       # RabbitMQ main port
-#      - "15672:15672"     # Management UI port
-#    volumes:
-#      - rabbitmq_data:/var/lib/rabbitmq
-#      - rabbitmq_logs:/var/log/rabbitmq
+  redis:
+    build:
+      context: .
+      dockerfile: infrastructure/redis/Dockerfile
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  postgres:
+    build:
+      context: .
+      dockerfile: infrastructure/postgres/Dockerfile
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql.conf/data
+
+  minio:
+    build:
+      context: .
+      dockerfile: infrastructure/minio/Dockerfile
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+
+    volumes:
+      - minio-data:/data
+  rabbitmq:
+    build:
+        context: .
+        dockerfile: infrastructure/rabbitmq/Dockerfile
+    container_name: rabbitmq
+    image: rabbitmq:3-management  # Use the official RabbitMQ image with management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: user      # Default username
+      RABBITMQ_DEFAULT_PASS: password  # Default password
+    ports:
+      - "5672:5672"       # RabbitMQ main port
+      - "15672:15672"     # Management UI port
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+      - rabbitmq_logs:/var/log/rabbitmq
   elasticsearch:
     build:
       context: .
@@ -71,9 +71,9 @@ services:
       - elasticsearch
 
 volumes:
-#  redis-data:
-#  postgres-data:
-#  minio-data:
-#  rabbitmq_data:
-#  rabbitmq_logs:
+  redis-data:
+  postgres-data:
+  minio-data:
+  rabbitmq_data:
+  rabbitmq_logs:
   es_data:
