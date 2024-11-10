@@ -170,7 +170,7 @@ client = Minio(MINIO_ENDPOINT, access_key=MINIO_ACCESS_KEY, secret_key=MINIO_SEC
 ELASTICSEARCH_DSL={
     'default': {
         'hosts': 'http://localhost:9200',
-        # 'http_auth': ('elastic', 'DPVf8Bb7Kx92olSLfPQ+')
+        # 'http_auth': ('elasticsearch', 'DPVf8Bb7Kx92olSLfPQ+')
     }
 }
 
