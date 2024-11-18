@@ -18,6 +18,16 @@ def validate_serializer():
 
 
 def validate_serializer_zip():
+    """
+    A decorator that validates a serializer for both GET and POST requests.
+
+    Works just like `validate_serializer`, but also supports GET requests.
+
+    :param view_func: The view function to decorate
+    :type view_func: function
+    :return: The result of the view function
+    :rtype: object
+    """
     def decorator(view_func):
         @wraps(view_func)
         def wrapper(self, request, *args, **kwargs):

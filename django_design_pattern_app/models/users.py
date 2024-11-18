@@ -32,4 +32,13 @@ class Users(ExportModelOperationsMixin("users"), AbstractUser, BaseModel):
     REQUIRED_FIELDS = []
 
     def __str__(self) -> str:
+        """
+        Return a string representation of this user.
+
+        This string is the user's username.
+
+        Returns:
+            str: The user's username.
+        """
         return self.username
+

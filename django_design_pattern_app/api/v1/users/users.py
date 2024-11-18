@@ -21,8 +21,10 @@ class IndexView(BaseView, generics.GenericAPIView):
     @validate_serializer()
     @handle_exceptions
     def get(self, request):
+
         """
-        Sample View
+        This is a test view, which is used to test the health of other services.
+        It calls the database, minio, and elasticsearch.
         """
         print("Starting... Call  database  ")
         self.user_repo.get_user_by_id(request.user.id)

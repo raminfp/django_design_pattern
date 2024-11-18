@@ -8,9 +8,21 @@ class Command(BaseCommand):
     help = 'Import SQL from file into PostgreSQL database'
 
     def add_arguments(self, parser):
+        """
+        Adds command line arguments to the parser.
+
+        :param parser: Django's argparse parser
+        """
         parser.add_argument('sql_file', type=str, help='Path to SQL file to import')
 
     def handle(self, *args, **kwargs):
+        """
+        Handle the command.
+
+        :param args: list of positional arguments (not used)
+        :param kwargs: dictionary of keyword arguments
+        :return: None
+        """
         sql_file = kwargs['sql_file']
         # Convert relative path to absolute path
         sql_file_path = os.path.abspath(sql_file)

@@ -6,6 +6,15 @@ import os
 
 class MinIOModule(Module):
     def configure(self, binder):
+        """
+        Binds MinIO SDK to the injector. This allows the MinIOSDK class to be
+        injected into other classes.
+
+        :param binder: The injector's binder
+        :type binder: injector.Binder
+        :return: None
+        :rtype: None
+        """
         minio_client = Minio(
             endpoint=os.getenv('MINIO_ENDPOINT'),
             access_key=os.getenv('MINIO_ACCESS_KEY'),

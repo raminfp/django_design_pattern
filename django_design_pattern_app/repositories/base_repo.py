@@ -9,5 +9,15 @@ class BaseRepo:
 
     @inject
     def __init__(self, minio_sdk: MinIOSDK, elk: SearchELK):
+        """
+        Constructor for BaseRepo.
+
+        Parameters
+        ----------
+        minio_sdk : MinIOSDK
+            MinIO service object
+        elk : SearchELK
+            Elasticsearch service object
+        """
         self.service_minio = minio_sdk
         self.elk = elk

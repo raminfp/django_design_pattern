@@ -10,6 +10,16 @@ from django_design_pattern_app.middleware.response import APIResponse
 
 
 def handle_exceptions(func):
+    """
+    A decorator that catches all exceptions in a view and sends them to
+    Sentry before returning a 500 response.
+
+    Example usage:
+
+    @handle_exceptions
+    def post(self, request):
+        pass
+    """
     @wraps(func)
     def wrapper(*args, **kwargs):
         try:
@@ -21,17 +31,28 @@ def handle_exceptions(func):
     return wrapper
 
 
-'''
-  @handle_exceptions_special(
+def handle_exceptions_special(*exception_handlers):
+    """
+    A decorator that catches exceptions in a view and sends them to Sentry before returning a 500 response.
+
+    It allows you to specify special exception handlers for specific exceptions.
+
+    Example usage:
+
+    @handle_exceptions_special(
         (FileNotFoundError, 1111, 404),
         (IOError, 4, 500),
     )
-  def post(self, request):
+    def post(self, request):
         pass
-'''
 
+    This decorator will catch `FileNotFoundError` and `IOError` and return a 404 and 500 response respectively, while catching all other exceptions and returning a 500 response.
 
-def handle_exceptions_special(*exception_handlers):
+    :param exception_handlers: A list of tuples in the form of `(exception_type, error_code, status)`.
+    :type exception_handlers: list
+    :return: A decorator that will catch exceptions and return a 500 response.
+    :rtype: function
+    """
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
