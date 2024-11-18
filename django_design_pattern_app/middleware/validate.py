@@ -3,6 +3,15 @@ from django_design_pattern_app.utils.validations import ValidateAndHandleErrors
 
 
 def validate_serializer():
+    """
+    A decorator that validates a serializer for a POST request.
+
+    Args:
+        view_func: The view function to decorate.
+
+    Returns:
+        A decorated view function that validates the serializer before calling the original view function.
+    """
     def decorator(view_func):
         @wraps(view_func)
         def wrapper(self, request, *args, **kwargs):
