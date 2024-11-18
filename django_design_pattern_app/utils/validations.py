@@ -7,6 +7,40 @@ class ValidateAndHandleErrors(APIView):
 
     @staticmethod
     def validate_and_handle_errors(serializer):
+        """
+        Validates the given serializer and returns an APIResponse object based on the errors
+        in the serializer. If there are no errors, returns None.
+
+        The APIResponse object is created using the error code and status code from the
+        error messages in the serializer.
+
+        The following error codes are used:
+        1004: Blank
+        1006: Max length
+        1000: Invalid
+        1007: Unique
+        1008: Password mismatch
+        1009: Invalid choice
+        1010: Min length
+        1011: Invalid image
+        1012: Mobile value
+        1013: Mobile length
+        1014: Sms code send
+        1015: Code wrong
+        1016: Time wrong
+        1017: Package invalid
+        1018: Customer invalid
+        1019: Arch invalid
+        1021: Invalid mobile
+        1030: Empty
+
+        If the error is not found in the above list, a generic error message with code 1 is returned.
+
+        :param serializer: The serializer to validate
+        :type serializer: rest_framework.serializers.Serializer
+        :return: An APIResponse object with the error code and status code
+        :rtype: APIResponse
+        """
         serializer.is_valid()
         if serializer.errors:
             for key, value in serializer.errors.items():
