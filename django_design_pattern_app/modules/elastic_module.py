@@ -14,7 +14,7 @@ class ElasticModule(Module):
         Returns:
             Elasticsearch: An instance of Elasticsearch
         """
-        return Elasticsearch(settings.ELASTICSEARCH_DSL['default']['hosts'])
+        return Elasticsearch(settings.ELASTICSEARCH_HOSTS['default']['hosts'])
 
     @singleton
     @provider

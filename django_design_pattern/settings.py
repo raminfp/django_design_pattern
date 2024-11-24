@@ -21,7 +21,6 @@ load_dotenv(dotenv_path=f'{environment}.env')
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -96,9 +95,7 @@ REST_FRAMEWORK = {
     )
 }
 
-
 WSGI_APPLICATION = 'django_design_pattern.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
@@ -109,7 +106,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -129,7 +125,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -141,7 +136,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
@@ -152,12 +146,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 
 from minio import Minio
-
 
 MINIO_ENDPOINT = os.getenv('MINIO_ENDPOINT')
 MINIO_ACCESS_KEY = os.getenv('MINIO_ACCESS_KEY')
@@ -166,11 +158,9 @@ MINIO_SECURE = os.getenv('MINIO_SECURE')
 
 client = Minio(MINIO_ENDPOINT, access_key=MINIO_ACCESS_KEY, secret_key=MINIO_SECRET_KEY, secure=False)
 
-
-ELASTICSEARCH_DSL={
+ELASTICSEARCH_HOSTS = {
     'default': {
         'hosts': 'http://localhost:9200',
         # 'http_auth': ('elasticsearch', 'DPVf8Bb7Kx92olSLfPQ+')
     }
 }
-

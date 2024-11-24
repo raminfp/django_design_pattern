@@ -1,5 +1,4 @@
 djangorestframework-simplejwt
-django-elasticsearch-dsl
 simple-file-checksum
 django-cors-headers
 djangorestframework
@@ -8,6 +7,7 @@ django-ratelimit
 confluent-kafka
 psycopg2-binary
 django-environ
+elasticsearch
 python-dotenv
 django-filter
 django_redis
