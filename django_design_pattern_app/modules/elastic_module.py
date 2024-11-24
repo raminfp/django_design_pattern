@@ -1,3 +1,5 @@
+import os
+
 from injector import Module, singleton, provider
 from elasticsearch import Elasticsearch
 from redis import Redis
@@ -14,7 +16,7 @@ class ElasticModule(Module):
         Returns:
             Elasticsearch: An instance of Elasticsearch
         """
-        return Elasticsearch(settings.ELASTICSEARCH_HOSTS['default']['hosts'])
+        return Elasticsearch(os.getenv('ELASTICSEARCH_HOSTS'))
 
     @singleton
     @provider
@@ -25,7 +27,7 @@ class ElasticModule(Module):
         Returns:
             Redis: An instance of Redis
         """
-        return Redis(host=settings.REDIS_HOST, port=settings.REDIS_PORT)
+        return Redis(host=os.getenv('REDIS_HOST'), port=os.getenv('REDIS_PORT'))
 
 
 def configure_elastic(binder):

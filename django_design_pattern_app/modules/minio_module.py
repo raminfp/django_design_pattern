@@ -1,5 +1,5 @@
 from injector import Module, singleton
-from django_design_pattern_app.services.minio.minio import MinIOSDK
+from django_design_pattern_app.services.minio.minio import MinioSDK
 from minio import Minio
 import os
 
@@ -23,4 +23,4 @@ class MinIOModule(Module):
         )
 
         binder.bind(Minio, to=minio_client, scope=singleton)
-        binder.bind(MinIOSDK, to=MinIOSDK, scope=singleton)
+        binder.bind(MinioSDK, to=MinioSDK, scope=singleton)
